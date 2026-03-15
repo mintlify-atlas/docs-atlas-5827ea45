@@ -1,0 +1,143 @@
+{
+  "projectType": "sdk-library",
+  "projectName": "Trix",
+  "projectDescription": "A WYSIWYG rich text editor for everyday writing, built on web standards using Custom Elements and a sophisticated internal document model.",
+  "theme": "willow",
+  "primaryColor": "#c64a78",
+  "lightColor": "#b42964",
+  "darkColor": "#6870b1",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "installation",
+              "quickstart"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/document-model",
+              "concepts/editor-element",
+              "concepts/toolbar",
+              "concepts/attachments"
+            ]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/form-integration",
+              "guides/programmatic-editing",
+              "guides/styling",
+              "guides/file-attachments",
+              "guides/custom-actions",
+              "guides/html-sanitization",
+              "guides/accessibility"
+            ]
+          },
+          {
+            "group": "Framework Integration",
+            "pages": [
+              "integration/rails-action-text",
+              "integration/vanilla-js",
+              "integration/npm-bundlers"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Elements",
+            "pages": [
+              "api/trix-editor-element",
+              "api/trix-toolbar-element"
+            ]
+          },
+          {
+            "group": "Editor API",
+            "pages": [
+              "api/editor",
+              "api/document",
+              "api/attachment"
+            ]
+          },
+          {
+            "group": "Configuration",
+            "pages": [
+              "api/config",
+              "api/events"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Custom Elements-based WYSIWYG editor (<trix-editor> and <trix-toolbar>)",
+    "Sophisticated internal document model (not contenteditable/execCommand dependent)",
+    "File and image attachment support with upload progress tracking",
+    "Programmatic editing API (insert, delete, format text)",
+    "Unlimited undo/redo with state serialization",
+    "HTML sanitization via DOMPurify",
+    "Form integration with Element Internals and constraint validation",
+    "Inline (bold, italic, strike, href) and block (heading, quote, code, lists) attributes",
+    "Custom toolbar and custom action support",
+    "ESM and UMD distribution formats"
+  ],
+  "publicApiSurface": [
+    "Trix (default export)",
+    "Trix.config",
+    "Trix.models",
+    "Trix.elements.TrixEditorElement",
+    "Trix.elements.TrixToolbarElement",
+    "<trix-editor> custom element",
+    "<trix-toolbar> custom element",
+    "editor.getDocument()",
+    "editor.loadHTML(html)",
+    "editor.loadJSON(snapshot)",
+    "editor.insertString(string)",
+    "editor.insertHTML(html)",
+    "editor.insertFile(file)",
+    "editor.insertAttachment(attachment)",
+    "editor.insertLineBreak()",
+    "editor.deleteInDirection(direction)",
+    "editor.getSelectedRange()",
+    "editor.setSelectedRange(range)",
+    "editor.moveCursorInDirection(direction)",
+    "editor.expandSelectionInDirection(direction)",
+    "editor.getClientRectAtPosition(position)",
+    "editor.activateAttribute(name, value)",
+    "editor.deactivateAttribute(name)",
+    "editor.attributeIsActive(name)",
+    "editor.increaseNestingLevel()",
+    "editor.decreaseNestingLevel()",
+    "editor.undo()",
+    "editor.redo()",
+    "editor.recordUndoEntry(description)",
+    "Trix.Attachment",
+    "Trix.config.toolbar.getDefaultHTML()",
+    "Trix.config.textAttributes",
+    "Trix.config.blockAttributes",
+    "Trix.config.dompurify",
+    "trix-before-initialize event",
+    "trix-initialize event",
+    "trix-change event",
+    "trix-before-render event",
+    "trix-before-paste event",
+    "trix-paste event",
+    "trix-selection-change event",
+    "trix-focus / trix-blur events",
+    "trix-file-accept event",
+    "trix-attachment-add event",
+    "trix-attachment-edit event",
+    "trix-attachment-remove event",
+    "trix-action-invoke event"
+  ]
+}
